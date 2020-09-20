@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.5s ease-in;
+}
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: rebeccapurple;
+  border-radius: 50%;
+  border: 1px solid black;
+  transition: all 0.5s ease-in;
+}
+/* Info Main Gird */
+.info-main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1em;
+}
+.info-main-grid img {
+  margin: 1em auto;
+  border-radius: 13px;
+}
+
+.theme-toggle:active {
+  transform: scale(2);
+}
+/* THEME CHANGER.. */
+.dark {
+  background: #333;
+}
+.purple {
+  background-color: rebeccapurple;
+}
+header {
+  margin: 2em auto;
+  width: 80%;
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 2rem;
+}
+header input {
+  width: 100%;
+  border: none;
+  font-size: 1.6rem;
+  padding: 0.2rem 1em;
+  margin: 1em 0;
+}
+header button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: rgb(151, 88, 214);
+  border-radius: 10px;
+  color: snow;
+  font-size: 1.3rem;
+}
+.container {
+  padding: 1em;
+  margin: auto;
+  margin-top: 1em;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 200px;
+  height: 340px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  margin: 3em 1em;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 13px;
+}
+
+.box:hover {
+  box-shadow: 0 0 5px whitesmoke;
+  transform: scale(1.05);
+  border-radius: 13px;
+}
+
+.box a {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.info {
+  width: 240px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.info h1 {
+  color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-right: 1em;
+}
+
+.orange {
+  color: orange;
+}
+.red {
+  color: orangered;
+}
+.green {
+  color: greenyellow;
+}
+/* Overview Page Styling */
+
+/* .description-main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  width: 90%;
+  margin: auto;
+} */
+.background {
+  background-attachment: fixed;
+  width: 100%;
+  height: 80vh;
+}
+.description-main img {
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+}
+.primary-info {
+  color: white;
+  padding: 4em 1.3em;
+  padding-right: 2em;
+  width: 100%;
+}
+.primary-info h1 {
+  text-align: center;
+  padding: 0.2em 0;
+  padding-top: 0;
+}
+.primary-info p {
+  padding: 0 0.2em;
+  padding-bottom: 1em;
+  text-align: justify;
+  font-size: 1rem;
+  word-wrap: break-word;
+}
+.primary-info button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  background: rebeccapurple;
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+button:active {
+  transform: scale(1.09);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+.secondary-information {
+  padding: 4em 0;
+}
+.secondary-information ul {
+  list-style: none;
+  display: flex;
+  margin: 1em auto;
+}
+.secondary-information h1 {
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 0.9em;
+}
+.secondary-information strong {
+  font-size: 1.2rem;
+  margin: 0 1em;
+  font-weight: 300;
+}
+.secondary-information ul li {
+  margin: 0 1em;
+  font-size: 1.2rem;
+}
+.episode-section {
+  text-align: center;
+  width: 99%;
+  margin: auto;
+}
+.section-cast {
+  text-align: center;
+}
+.grid-cast {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em 1em;
+}
+.cast-box {
+  width: 200px;
+  height: 250px;
+  margin: 1em;
+  position: relative;
+}
+.cast-box::after {
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rebeccapurple;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.info-cast h1 {
+  font-size: 1.3rem;
+  padding: 1em 0;
+  text-align: center;
+  font-weight: 300;
+}
+.info-cast {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+}
+.cast-box:hover .info-cast {
+  opacity: 1;
+  transform: translateY(100px);
+}
+.cast-box:hover::after {
+  opacity: 0.7;
+}
+.info-cast span {
+  color: yellow;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1em 0;
+}
+.cast-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.grid-main h1 {
+  padding: 1em 0;
+  padding-bottom: 2em;
+}
+.grid-main {
+  width: 100%;
+  padding-left: 1em;
+  margin: auto;
+  text-align: center;
+}
+.grid-main img {
+  margin: 1em;
+  border-radius: 14px;
+  box-shadow: 0 0 5px snow;
+  width: 250px;
+  height: 400px;
+  cursor: pointer;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* Episodes Styling */
+.episodes-section {
+  width: 100%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.episode {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 2fr;
+
+  background-color: #444;
+  padding: 1em;
+  width: 90%;
+  margin: auto;
+  margin: 2em auto;
+  border-radius: 13px;
+}
+.episode:nth-of-type(odd) {
+  background: #3e3e33;
+}
+.episode img {
+  border-radius: 30px;
+  object-fit: cover;
+  margin: 0 13px;
+}
+.episode-info h1 {
+  font-size: 1.3rem;
+  font-weight: 100;
+  text-align: center;
+  padding-bottom: 13px;
+}
+.episode-info p {
+  font-size: 1rem;
+  text-align: justify;
+  padding: 1em 2em;
+  padding-bottom: 13px;
+}
+.episode-info ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.episode-info ul li {
+  color: yellow;
+}
+footer {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  padding: 0.4rem 0;
+}
+@media (max-width: 800px) {
+  .box {
+    width: 250px;
+    height: 300px;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+  }
+  .info h1 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 650px) {
+  .box {
+    width: 200px;
+    height: 250px;
+  }
+}

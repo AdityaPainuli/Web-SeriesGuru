@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overview file</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="theme-toggle" id="theme-toggle"></div>
+    <section></section>
+    <script src="script.js"></script>
+    <script>
+      getDescription();
+      //Theme-changer
+      const Themetoggler = document.getElementById('theme-toggle');
+
+      Themetoggler.addEventListener('click', (e) => {
+        document.body.classList.toggle('purple');
+        Themetoggler.classList.toggle('dark');
+      });
+    </script>
+  </body>
+</html>
